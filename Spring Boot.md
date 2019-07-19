@@ -820,7 +820,7 @@ java -jar spring-boot-02-config-02-0.0.1-SNAPSHOT.jar --server.port=8087  --serv
 
     ```
 
-    ​
+    
 
 **==将 类路径下  META-INF/spring.factories 里面配置的所有EnableAutoConfiguration的值加入到了容器中；==**
 
@@ -1145,7 +1145,7 @@ a（slf4j+logback）: Spring（commons-logging）、Hibernate（jboss-logging）
 
 **如何让系统中所有的日志都统一到slf4j；**
 
-==1、将系统中其他日志框架先排除出去；==
+<u>==1、将系统中其他日志框架先排除出去；==</u>
 
 ==2、用中间包来替换原有的日志框架；==
 
@@ -1293,7 +1293,7 @@ logging.pattern.file=%d{yyyy-MM-dd} === [%thread] === %-5level === %logger{50} =
 
 logback.xml：直接就被日志框架识别了；
 
-**logback-spring.xml**：日志框架就不直接加载日志的配置项，由SpringBoot解析日志配置，可以使用SpringBoot的高级Profile功能
+**logback-spring.xml**：日志框架就不直接加载日志的配置项，由SpringBoot解析日志配置，可以使用SpringBoot的<u>**高级Profile功能**</u>
 
 ```xml
 <springProfile name="staging">
@@ -1502,17 +1502,21 @@ public class ResourceProperties implements ResourceLoaderAware {
 
 http://www.webjars.org/
 
+jquery的webjars:
+
+
+
 ![](images/搜狗截图20180203181751.png)
 
 localhost:8080/webjars/jquery/3.3.1/jquery.js
 
 ```xml
 <!--引入jquery-webjar-->在访问的时候只需要写webjars下面资源的名称即可
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>jquery</artifactId>
-			<version>3.3.1</version>
-		</dependency>
+<dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>jquery</artifactId>
+    <version>3.4.1</version>
+</dependency>
 ```
 
 
@@ -1718,7 +1722,7 @@ Spring Boot 自动配置好了SpringMVC
 
 - Custom `Favicon` support (see below).  favicon.ico
 
-  ​
+  
 
 - 自动注册了 of `Converter`, `GenericConverter`, `Formatter` beans.
 
@@ -1743,7 +1747,7 @@ Spring Boot 自动配置好了SpringMVC
 
     ==自己给容器中添加HttpMessageConverter，只需要将自己的组件注册容器中（@Bean,@Component）==
 
-    ​
+    
 
 - Automatic registration of `MessageCodesResolver` (see below).定义错误代码生成规则
 
