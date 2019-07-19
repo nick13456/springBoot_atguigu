@@ -1521,7 +1521,7 @@ localhost:8080/webjars/jquery/3.3.1/jquery.js
 
 
 
-==2）、"/**" 访问当前项目的任何资源，都去（静态资源的文件夹）找映射==
+==2）、"/**" 访问当前项目的任何资源，都去（<u>静态资源的文件夹</u>）找映射==
 
 ```
 "classpath:/META-INF/resources/", 
@@ -1533,7 +1533,7 @@ localhost:8080/webjars/jquery/3.3.1/jquery.js
 
 localhost:8080/abc ===  去静态资源文件夹里面找abc
 
-==3）、欢迎页； 静态资源文件夹下的所有index.html页面；被"/**"映射；==
+==3）、欢迎页； <u>静态资源文件夹下的所有index.html页面</u>；被"/**"映射；==
 
 ​	localhost:8080/   找index页面
 
