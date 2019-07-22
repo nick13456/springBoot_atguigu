@@ -1714,7 +1714,7 @@ Spring Boot 自动配置好了SpringMVC
 - Inclusion of `ContentNegotiatingViewResolver` and `BeanNameViewResolver` beans.
   - 自动配置了ViewResolver（视图解析器：根据方法的返回值得到视图对象（View），视图对象决定如何渲染（转发？重定向？））
   - ContentNegotiatingViewResolver：组合所有的视图解析器的；
-  - ==如何定制：我们可以自己给容器中添加一个视图解析器；自动的将其组合进来；==
+  - ==<u>如何定制：我们可以自己给容器中添加一个视图解析器；自动的将其组合进来；</u>==
 
 - Support for serving static resources, including support for WebJars (see below).静态资源文件夹路径,webjars
 
@@ -1791,6 +1791,7 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
     public void addViewControllers(ViewControllerRegistry registry) {
        // super.addViewControllers(registry);
         //浏览器发送 /atguigu 请求来到 success
+        //转发请求
         registry.addViewController("/atguigu").setViewName("success");
     }
 }
